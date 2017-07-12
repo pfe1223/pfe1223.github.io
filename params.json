@@ -1,7 +1,0 @@
-{
-  "name": "FAIS Student Radio",
-  "tagline": "",
-  "body": "### Test Page for FAIS Radio\r\n\r\n<!--VosCast.com Flash Player-->\r\n<script type=\"text/javascript\" src=\"http://cdn.voscast.com/player/?key=c9d4c42a6cabcd4546f6c21ba3a03a71\"></script>\r\n<!--End Player-->",
-  "google": "",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
