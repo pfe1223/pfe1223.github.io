@@ -50,16 +50,16 @@ function parseText() {
   if (res[0] == "go") {
     for (var i = 0; i < res.length; i++) {
       if (res[i] == "north" && house[pos].north) {
-        game += ">>> Go to the " + house[pos].north + gap;
+        game += ">>> Go North to the " + house[pos].north + gap;
         changeRoom(house[pos].north);
       } else if (res[i] == "east" && house[pos].east) {
-        game += ">>> Go to the " + house[pos].east + gap;
+        game += ">>> Go East to the " + house[pos].east + gap;
         changeRoom(house[pos].east);
       } else if (res[i] == "south" && house[pos].south) {
-        game += ">>> Go to the " + house[pos].south + gap;
+        game += ">>> Go South to the " + house[pos].south + gap;
         changeRoom(house[pos].south);
       } else if (res[i] == "west" && house[pos].west) {
-        game += ">>> Go to the " + house[pos].west + gap;
+        game += ">>> Go West to the " + house[pos].west + gap;
         changeRoom(house[pos].west);
       } else {
 

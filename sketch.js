@@ -8,10 +8,11 @@ var gap = "\n\n"; //blank line
 function setup() {
   game = "";
   noCanvas();
-  txt = createElement('textarea');
-  createP('Type your commands below.');
+  txt = document.getElementById('txt');
   input = createInput();
+  input.elt.focus();
   input.changed(parseText);
+  input.attribute("align", "center");
   pos = 0;
 
   house[0] = {
@@ -28,7 +29,7 @@ function setup() {
       },
       {
         name: "letters",
-        description: "On top of the desk are a pile of letters. Looks like it's mostly junk mail addressed to a 'Mr. V. Dragulya'."
+        description: "On top of the desk are a pile of letters. Looks like it's mostly junk mail addressed to a \"Mr. V. Dragulya\"."
       }
     ],
     end: false
@@ -127,7 +128,7 @@ function setup() {
   house[7] = {
     name: "guest bedroom",
     start: false,
-    description: "You step slowly into the guest bedroom, the door slams shut behind you. 'Why hello there,' says a tall, slender man. His eyes remind you of the boy from the family portrait. 'I am delighted that you will be joining me for dinner,' the man continues. 'And when I say \"For dinner\" I don't mean as my guest.' The man smiles slyly, revealing long, pointed incisors.",
+    description: "You step slowly into the guest bedroom, the door slams shut behind you. \"Why hello there,\" says a tall, slender man. His eyes remind you of the boy from the family portrait. \"I am delighted that you will be joining me for dinner,\" the man continues. \"And when I say 'for dinner' I don't mean as my guest.\" The man smiles slyly, revealing long, pointed incisors.",
     north: false,
     east: false,
     south: "kitchen",
@@ -140,5 +141,6 @@ function setup() {
 }
 
 function draw() {
-  txt.value(game);
+  txt.scrollTop = txt.scrollHeight;
+  txt.value = game;
 }
