@@ -1,0 +1,57 @@
+/* Color Palette */
+:root {
+  --bg-color: #485058;
+  --divider-color: #D7443F;
+  --normal-link: #A6A5A1;
+  --visited-link: #8698AD;
+  --font-color: #F1ECE9;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28pt;
+  color: var(--font-color);
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+}
+
+.a {
+  background-color: var(--bg-color);
+  width: 70%;
+  margin-left: 15%;
+  padding: 10px;
+}
+
+.b {
+  background-color: var(--divider-color);
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 5%;
+  height: 10px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 16pt;
+  color: var(--font-color);
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+a:link {
+  color: var(--normal-link);
+}
+
+a:visited {
+  color: var(--visited-link);
+}
