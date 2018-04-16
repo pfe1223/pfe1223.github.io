@@ -1,0 +1,26 @@
+.container-int {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5em 0;
+}
+
+.container-ext {
+  width: 100%;
+  background-color: #BE2AA0;
+  background-image: url('img/kent-all shapes.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+#kent img {
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "soap", sans-serif;
+  text-align: center;
+  font-size: 7vw;
+  mix-blend-mode: overlay;
+}

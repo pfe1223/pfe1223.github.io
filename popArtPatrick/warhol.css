@@ -1,0 +1,14 @@
+
+#warhol p {
+  color: white;
+}
+
+#warhol {
+  height: 600px;
+  width: 50%;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 22px;
+  background-image: url("img/beyonce.gif");
+  background-repeat: repeat;
+  background-size: 150px;
+}
