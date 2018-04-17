@@ -1,76 +1,122 @@
-#oldenburg {
-  background-image: url("https://thumbs.dreamstime.com/b/orange-yelow-blue-rays-dots-pop-art-background-retro-vector-illustration-drawing-design-96848660.jpg");
+#interior {
   position: relative;
-  height: 566px;
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#oldenburg {
+  width: 100%;
+  background-image: url("img/pizza.jpeg");
+  background-size: 100%;
 }
 
 #oldenburg p {
   color: black;
-}
-
-/* Center the meme */
-#oldenburg img {
-  position: relative;
-  width: 291px;
-  height: 345px;
-  top: 110.5px;
-  left: 254.5px;
-}
-
-/* Apply filter when hovering over cherries */
-#oldenburg img:hover {
-  filter: hue-rotate(180deg);
-}
-
-.topLeft {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
-}
-
-.topRight {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
-}
-
-.bottomLeft {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
-  padding: 1px;
-}
-
-.bottomRight {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
-  padding: 1px;
-}
-
-#oldenburg h2 {
-  text-align: center;
-  padding-top: 2px;
-  padding-bottom: 0px;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#oldenburg p {
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 4px;
   padding-right: 4px;
   font-size: 18px;
+}
+
+/* Change my mind meme */
+#oldenburg img.changeMind {
+  position: absolute;
+  width: 320.1px;
+  height: 379.5px;
+  left: 346.83px;
+  top: 206.58px;
+}
+
+/* Doge meme */
+#oldenburg img.doge {
+  position: absolute;
+  width: 473.3333333333px;
+  height: 315.3333333333px;
+  left: 777.0933333333px;
+  top: 238.6633333333px;
+}
+
+/* Disloyal meme */
+#oldenburg img.disloyal {
+  position: absolute;
+  width: 492.3076923077px;
+  height: 369.2307692308px;
+  left: 260.7261538462px;
+  top: 608.0446153846px;
+}
+
+/* Ermahgerd meme */
+#oldenburg img.ermahgerd {
+  position: absolute;
+  width: 309.2307692308px;
+  height: 464.6153846154px;
+  left: 859.1446153846px;
+  top: 560.3523076923px;
+}
+
+.topLeft {
+  opacity: 0;
+  position: absolute;
+  top: 206.58;
+  left: 391.88px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 230px;
+  pointer-events: none;
+}
+
+.topLeft:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.topRight {
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 898.76px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 230px;
+  pointer-events: none;
+}
+
+.topRight:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bottomLeft {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 391.88px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 230px;
+}
+
+.bottomLeft:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bottomRight {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 898.76px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 230px;
+}
+
+.bottomRight:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#oldenburg h2 {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
