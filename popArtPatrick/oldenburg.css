@@ -1,13 +1,18 @@
 #interior {
   position: relative;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #oldenburg {
-  width: 100%;
+  position: relative;
+  width: 1535px;
+  height: 1201px;
   background-image: url("img/pizza.jpeg");
-  background-size: 100%;
+  background-size: 95%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
 }
 
 #oldenburg p {
@@ -24,8 +29,8 @@
   position: absolute;
   width: 320.1px;
   height: 379.5px;
-  left: 346.83px;
-  top: 206.58px;
+  left: 223.95px;
+  top: 110.5px;
 }
 
 /* Doge meme */
@@ -33,8 +38,8 @@
   position: absolute;
   width: 473.3333333333px;
   height: 315.3333333333px;
-  left: 777.0933333333px;
-  top: 238.6633333333px;
+  left: 915.3333333333px;
+  top: 142.5833333333px;
 }
 
 /* Disloyal meme */
@@ -42,8 +47,8 @@
   position: absolute;
   width: 492.3076923077px;
   height: 369.2307692308px;
-  left: 260.7261538462px;
-  top: 608.0446153846px;
+  left: 137.8461538462px;
+  top: 716.1346153846px;
 }
 
 /* Ermahgerd meme */
@@ -51,64 +56,22 @@
   position: absolute;
   width: 309.2307692308px;
   height: 464.6153846154px;
-  left: 859.1446153846px;
-  top: 560.3523076923px;
+  left: 997.3846153846px;
+  top: 668.4423076923px;
 }
 
-.topLeft {
+.textBox {
   opacity: 0;
   position: absolute;
-  top: 206.58;
-  left: 391.88px;
+  top: 450.5px;
+  left: 618px;
   background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
+  width: 300px;
+  height: 300px;
   pointer-events: none;
 }
 
-.topLeft:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.topRight {
-  opacity: 0;
-  position: absolute;
-  top: 10px;
-  left: 898.76px;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
-  pointer-events: none;
-}
-
-.topRight:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.bottomLeft {
-  opacity: 0;
-  position: absolute;
-  bottom: 10px;
-  left: 391.88px;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
-}
-
-.bottomLeft:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.bottomRight {
-  opacity: 0;
-  position: absolute;
-  bottom: 10px;
-  left: 898.76px;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 230px;
-}
-
-.bottomRight:target {
+.textBox:target {
   opacity: 1;
   pointer-events: auto;
 }
