@@ -18,6 +18,7 @@ $img4-height: 604/1.3
 $text-box: 270
 $half-text-box: $text-box / 2
 
+// Transparent black layer over the pizza
 #interior
   display: flex
   flex-wrap: wrap
@@ -27,6 +28,7 @@ $half-text-box: $text-box / 2
   height: 100%
   background-color: rgba(0, 0, 0, 0.3)
 
+// Pizza image in the background
 #oldenburg
   position: relative
   background-size: contain
@@ -35,6 +37,7 @@ $half-text-box: $text-box / 2
   margin: 0 auto
   background-repeat: no-repeat
 
+// Styles the paragraphs of text when you click on images
 #oldenburg p
   color: black
   line-height: 20px
@@ -45,27 +48,28 @@ $half-text-box: $text-box / 2
   font-size: 20px
   letter-spacing: 0.9px
 
-/* Change my mind meme */
+// Change my mind meme
 #oldenburg img.changeMind
   width: $img1-width + px
   height: $img1-height + px
 
 
-/* Doge meme */
+// Doge meme
 #oldenburg img.doge
   width: $img2-width + px
   height: $img2-height + px
 
-/* Disloyal meme */
+// Disloyal meme
 #oldenburg img.disloyal
   width: $img3-width + px
   height: $img3-height + px
 
-/* Ermahgerd meme */
+// Ermahgerd meme
 #oldenburg img.ermahgerd
   width: $img4-width + px
   height: $img4-height + px
 
+// Styles textboxes, transparent by default
 .textBox
   opacity: 0
   position: absolute
@@ -76,10 +80,12 @@ $half-text-box: $text-box / 2
   height: $text-box + px
   pointer-events: none
 
+// Makes the textboxes visible
 .textBox:target
   opacity: 1
   pointer-events: auto
 
+// Title in each textbox
 #oldenburg h2
   text-align: center
   padding-top: 5px
@@ -87,6 +93,7 @@ $half-text-box: $text-box / 2
   padding-left: 4px
   padding-right: 4px
 
+// Styles the "X" used to close the textboxes
 .close
   background: #606061
   color: #FFFFFF
@@ -96,6 +103,7 @@ $half-text-box: $text-box / 2
   text-align: center
   top: -10px
   width: 24px
+  font-family: sans-serif
   text-decoration: none
   font-weight: bold
   border-radius: 12px
