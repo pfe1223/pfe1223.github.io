@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sol LeWitt</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato:700|Merriweather" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #2c3e50;
+		}
+
+		a:link {
+			color: #3498db;
+		}
+
+		a:visited {
+			color: #9b59b6;
+		}
+
+		canvas {
+			margin: auto;
+		}
+
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		p {
+			color: #ecf0f1;
+			font-size: 24px;
+			font-family: 'Merriweather', serif;
+		}
+
+		h1 {
+			color: #2ecc71;
+			font-family: 'Lato', sans-serif;
+			font-size: 100px;
+			text-align: center;
+		}
+
+		h2 {
+			color: #2ecc71;
+			font-family: 'Lato', sans-serif;
+			font-size: 48px;
+		}
+
+		h3 {
+			color: #2ecc71;
+			font-family: 'Lato', sans-serif;
+			font-size: 36px;
+		}
+
+		#content {
+			width: 65%;
+			margin: auto;
+		}
+
+		#topPic {
+			width: 80%;
+			height: 80%;
+		}
+
+		.code {
+			color: #f1c40f;
+			font-family: font-family: 'Roboto Mono', monospace;
+		}
+
+		#bckgrnd {
+			background-color: #ecf0f1;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<h1>Sol LeWitt</h1>
+		<img id="topPic" src="imgs/lewittArt.jpg" />
+		<h2>The Artist</h2>
+		<p>
+			<a href="https://en.wikipedia.org/wiki/Sol_LeWitt">Sol LeWitt</a> was an American artist often associated with the Conceptual and Minimalist movements. A tool used by Conceptual artists is instruction-based art. LeWitt would create a set of isntructions
+			for a line-based drawing, and then let others create the art by following his instructions. Sol once said, <em>"The idea becomes a machine that makes the art."</em>
+		</p>
+
+		<img src="imgs/lewittSquares.jpg" />
+		<p>
+
+			The image above was created with help of LeWitt's instructions:
+		</p>
+
+		<p>
+			<em>USING A BLACK, HARD CRAYON DRAW A TWENTY INCH SQUARE.<br/>
+			DIVIDE THIS SQUARE INTO ONE INCH SQUARES. WITHIN EACH<br />
+			ONE INCH SQUARE, DRAW NOTHING, OR DRAW A DIAGONAL<br />
+			STRAIGHT LINE FROM CORNER TO CORNER OR TWO CROSSING<br />
+			STRAIGHT LINES DIAGONALLY FROM CORNER TO CORNER.</em><br />
+		</p>
+
+		<h2>Recreating LeWitt</h2>
+		<p>
+			Using lines, circles, and rectangles, you are going to create a set of instructions to create art.
+		</p>
+
+		<h2>Coding LeWitt</h2>
+		<p>
+			LeWitt's instructions are nothing more than an algorithm. You are going to take your art instructions and turn them into a computer algorithm that creates art with JavaScript.
+		</p>
+
+		<h3>Setup</h3>
+		<p>
+			Go to the <a href="https://alpha.editor.p5js.org/">P5 Web Editor</a> and click "Log in" in the top-right corner. Click on the Google logo at the bottom. Use your school email and password to log in.
+		</p>
+
+		<h3>P5 Fundamentals</h3>
+		<p>
+			Your typical P5 program has two functions, "setup" and "draw". The setup function runs only one time. You should use this function for things that will remain the same throughout your program (like your canvas size). The draw function is an infinite loop.
+		</p>
+		<p>
+			Your program will run to the end, then go back to the top and start again. It will only stop running if you press the stop button. Most of the code you write will go in the draw function.
+		</p>
+
+		<h3>The Canvas</h3>
+		<p>
+			The canvas is the area on which you draw with code. The canvas is declared in the setup function. The command is <span class="code">createCanvas(400, 400);</span>. The two numbers represent the width and the height of the canvas.
+		</p>
+
+		<p>
+			Positions on the canvas are done using a grid system. Each point is composed of two numbers, an x-coordinate (horizontal position) and a y-coordinate (vertical position). Unlike coordinate systems you see in your math class, the origin point (0, 0) is
+			in the top-left corner. As you move down the canvas, the y-value gets bigger. As you move to the right, the x-value gets bigger.
+		</p>
+
+		<div id="bckgrnd">
+			<img src="imgs/canvas.svg" />
+		</div>
+
+		<h3>Lines</h3>
+		<p>
+			To draw a line, use the command <span class="code">line(20, 20, 50, 50);</span>. This command requres four numbers. The first two numbers are the x- and y-values for the first point. The other two numbers are the x- and y-values for the second point.
+			The computer will draw a line between the two points.
+		</p>
+
+		<p>
+			To change the thickness of a line, you need to use the the <span class="code">strokeWeight(5);</span> command. This will set the thickness to five pixels. <span class="code">strokeWeight</span> should come before the <span class="code">line</span>			command.
+		</p>
+
+		<h3>Ellipses</h3>
+		<p>
+			Use the ellipse command when drawing circles or ovals. The command to do this is <span class="code">ellipse(10, 50, 20, 20);</span>. This will create a circle at the location (10, 50) with a width of 20 and a height of 20. It is the last two numbers
+			that make the shape a circle. If you have the code <span class="code">ellipse(10, 50, 30, 40);</span> then this would make an oval because the width is 30 and the height is 40.
+		</p>
+
+		<h3>Rectangles</h3>
+		<p>
+			Similar to the ellipse the command, the rectangle command can draw either a rectangle or a square. The command would look like <span class="code">rect(60, 60, 100, 100);</span>. This will create a square at location (60, 60) with a width of 100 and
+			a height of 100. Change the last two numbers if you want a rectangle.
+		</p>
+
+</body>
+</div>
+
+</html>
