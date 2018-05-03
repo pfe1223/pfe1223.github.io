@@ -1,5 +1,6 @@
 let myCanvas; //canvas variable
-let count = 2; //number of functions
+let count = 3; //number of functions
+let choice = 0; //function to be used
 
 function setup() {
   myCanvas = createCanvas(400, 400);
@@ -14,13 +15,17 @@ function setup() {
 // }
 
 function mousePressed() {
-  if (mouseX > 0 && mouseX <= width) {
-    let choice = floor(random(count + 1));
-    if (choice === 1) {
-      form1();
-    } else if (choice === 2) {
-      form2();
-    }
+  if (choice === count) {
+    choice = 0;
+  }
+  choice++;
+  //console.log(choice);
+  if (choice === 1) {
+    form1();
+  } else if (choice === 2) {
+    form2();
+  } else if (choice === 3) {
+    form3();
   }
 }
 
@@ -68,5 +73,35 @@ function form2() {
       noFill();
     }
     rect(i * 10, height - i * 10, 5 * i, 10);
+  }
+}
+
+function form3() {
+  background('#ecf0f1');
+
+  let x = random(width);
+  let y = random(height);
+  for (let i = 0; i < 50; i += 10) {
+    line(x + i, y, x + i, y + 60);
+  }
+
+  x = random(width);
+  y = random(height);
+  for (let i = 0; i < 50; i += 10) {
+    line(x, y + i, x + 60, y + i);
+  }
+
+  x = random(0, 30);
+  y = random(20, height - 20);
+  noFill();
+  for (let i = 0; i < 100; i += 10) {
+    ellipse(x + i, y, 5)
+  }
+
+  x = random(50, height - 50);
+  y = 50;
+  for (let i = 0; i < height; i += 80) {
+    noFill();
+    rect(x, y + i, 50, 50);
   }
 }
