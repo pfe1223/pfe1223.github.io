@@ -3,45 +3,41 @@ let count = 3; //number of functions
 let choice = 0; //function to be used
 
 function setup() {
-  myCanvas = createCanvas(400, 400);
-  myCanvas.parent('js');
-  background('#ecf0f1');
-  strokeWeight(3);
+  myCanvas = createCanvas(400, 400); //make canvas
+  myCanvas.parent('js'); //assign sketch to #js element
+  background('#ecf0f1'); //set initial background
+  strokeWeight(3); //set line thickness to 3px
 }
 
-// function draw() {
-//   background('#ecf0f1');
-//   shape1();
-// }
-
 function mousePressed() {
-  if (choice === count) {
+  if (choice === count) { //reset variable if equal to number of functions
     choice = 0;
   }
-  choice++;
+  choice++; //go to next sketch
   //console.log(choice);
   if (choice === 1) {
-    form1();
+    form1(); //show this image if choice is 1
   } else if (choice === 2) {
-    form2();
+    form2(); //show this image if choice is 2
   } else if (choice === 3) {
-    form3();
+    form3(); //show this image if choice is 3
   }
 }
 
 function form1() {
-  background('#ecf0f1');
+  background('#ecf0f1'); //clear canvas
   for (let i = 0; i <= 200; i += 10) {
     stroke(0);
-    line(i, 0, 0, i);
+    line(i, 0, 0, i); //draw 20 diagonal lines
   }
 
   for (let i = 1; i <= 400; i += 50) {
     noFill();
-    ellipse(i + 20, 200, 40, 40);
+    ellipse(i + 20, 200, 40, 40); //draw 8 hollow circles
   }
 
   for (let i = 0; i <= 400; i += 20) {
+    //draw 20 vertical lines
     line(i, height - i, i, height - i + 40);
   }
 }
