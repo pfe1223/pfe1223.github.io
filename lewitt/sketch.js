@@ -11,19 +11,21 @@ function setup() {
 }
 
 function mousePressed() {
-  if (choice === count) { //reset variable if equal to number of functions
-    choice = 0;
-  }
-  choice++; //go to next sketch
-  //console.log(choice);
-  if (choice === 1) {
-    form1(); //show this image if choice is 1
-  } else if (choice === 2) {
-    form2(); //show this image if choice is 2
-  } else if (choice === 3) {
-    form3(); //show this image if choice is 3
-  } else if (choice === 4) {
-    form4(); //show this image if choice is 4
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    if (choice === count) { //reset variable if equal to number of functions
+      choice = 0;
+    }
+    choice++; //go to next sketch
+    //console.log(choice);
+    if (choice === 1) {
+      form1(); //show this image if choice is 1
+    } else if (choice === 2) {
+      form2(); //show this image if choice is 2
+    } else if (choice === 3) {
+      form3(); //show this image if choice is 3
+    } else if (choice === 4) {
+      form4(); //show this image if choice is 4
+    }
   }
 }
 
