@@ -1,5 +1,5 @@
 let myCanvas; //canvas variable
-let count = 3; //number of functions
+let count = 4; //number of functions
 let choice = 0; //function to be used
 
 function setup() {
@@ -22,6 +22,8 @@ function mousePressed() {
     form2(); //show this image if choice is 2
   } else if (choice === 3) {
     form3(); //show this image if choice is 3
+  } else if (choice === 4) {
+    form4(); //show this image if choice is 4
   }
 }
 
@@ -121,5 +123,29 @@ function form3() {
       line(0, 0, x, y);
     }
     pop();
+  }
+}
+
+function form4() {
+  background('#ecf0f1'); //clear background
+
+  //dashed vertical lines
+  for (let i = 0; i < width / 2; i += 10) {
+    for (let j = 0; j < height; j += 20) {
+      line(i, j, i, j + 15);
+    }
+  }
+
+  //grid of circles
+  for (let j = 15; j < height / 2; j += 40) {
+    for (let i = 200; i < width; i += 40) {
+      fill(0);
+      ellipse(i + 10, j, 30);
+    }
+  }
+
+  //draw horizontal lines
+  for (let i = 200; i < height; i += 10) {
+    line(200, i, width - 10, i);
   }
 }
