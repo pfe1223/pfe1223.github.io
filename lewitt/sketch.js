@@ -7,6 +7,7 @@ function setup() {
   myCanvas.parent('js'); //assign sketch to #js element
   background('#ecf0f1'); //set initial background
   strokeWeight(3); //set line thickness to 3px
+  angleMode(DEGREES);
 }
 
 function mousePressed() {
@@ -43,18 +44,20 @@ function form1() {
 }
 
 function form2() {
-  background('#ecf0f1');
-  rectMode(CENTER);
+  background('#ecf0f1'); //clear background
+  rectMode(CENTER); //draw rects from their center
   for (let i = 0; i < width; i += 15) {
     noFill();
     rect(i, i, 20, 20);
   }
 
   for (let i = 0; i < height; i += 40) {
+    //draw 10 lines
     line(width - i, height - i, i, height - i);
   }
 
   for (let i = 0; i < 5; i++) {
+    //draw 5 circles of random position and size
     let x = random(width);
     let y = random(height);
     let s = random(20, 90);
@@ -63,6 +66,7 @@ function form2() {
   }
 
   for (let i = 0; i < 50; i++) {
+    //draw alternating black & white rectanges that grow longer
     if (i % 2 === 0) {
       fill(0);
     } else {
@@ -73,17 +77,19 @@ function form2() {
 }
 
 function form3() {
-  background('#ecf0f1');
+  background('#ecf0f1'); //clear background
 
-  let x = random(width);
-  let y = random(height);
+  let x = random(width); //random x value
+  let y = random(height); //random y value
   for (let i = 0; i < 50; i += 10) {
+    //draw five random vertical lines
     line(x + i, y, x + i, y + 60);
   }
 
   x = random(width);
   y = random(height);
   for (let i = 0; i < 50; i += 10) {
+    //draw five random horizontal lines
     line(x, y + i, x + 60, y + i);
   }
 
@@ -99,5 +105,18 @@ function form3() {
   for (let i = 0; i < height; i += 80) {
     noFill();
     rect(x, y + i, 50, 50);
+  }
+
+  for (let i = 0; i < 10; i++) {
+    x = random(50, width - 50);
+    y = random(50, height - 50);
+    push();
+    translate(x, y);
+    for (let j = 0; j < 360; j += 36) {
+      x = cos(j) * 20;
+      y = sin(j) * 20;
+      line(0, 0, x, y);
+    }
+    pop();
   }
 }
