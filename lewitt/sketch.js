@@ -96,18 +96,21 @@ function form3() {
   x = random(0, 30);
   y = random(20, height - 20);
   noFill();
+  //draw 10 horizontal circles
   for (let i = 0; i < 100; i += 10) {
     ellipse(x + i, y, 5)
   }
 
   x = random(50, height - 50);
   y = 50;
+  //draw 5 vertical circles
   for (let i = 0; i < height; i += 80) {
     noFill();
     rect(x, y + i, 50, 50);
   }
 
   for (let i = 0; i < 10; i++) {
+    //draw 10 "gears"
     x = random(50, width - 50);
     y = random(50, height - 50);
     push();
