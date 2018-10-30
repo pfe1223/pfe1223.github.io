@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Math Dictionary</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="handleLogin.js"></script>
+  <script src="readData.js"></script>
+
+  <!-- Load our React component. -->
+  <script type='text/babel' src="dictionary.js"></script>
+</head>
+
+<body>
+
+  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
+
+  <div id="content">
+    <div id="titleArea">
+      <h1>Dictionnaire de maths<br />Math Dictionary</h1>
+    </div>
+
+    <!-- We will put our React component inside this div. -->
+    <div id="dictionaryArea"></div>
+  </div>
+
+</body>
+
+</html>
