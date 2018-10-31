@@ -230,7 +230,7 @@ class MathDictionary extends React.Component {
     let img
     for (let i = 0; i < data.length; i++) {
       if(data[i].objID === this.state.obj) {
-        img = "./assets/" + data[i].image + ".png"
+        img = "assets/" + data[i].image + ".png"
       }
     }
     return <img src={img}></img>
