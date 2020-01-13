@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');main.svelte-su8in2{width:100%;margin:auto}h1.svelte-su8in2{text-align:center;font-family:'Karla', sans-serif;color:#e74c3c;font-size:96px}
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');#searchBox.svelte-32k9uo{font-family:'Montserrat', sans-serif;font-size:24px;display:block;margin:auto}#searchArea.svelte-32k9uo{width:100%;margin-bottom:20px}.wordButton.svelte-32k9uo{font-family:'Montserrat', sans-serif;width:33%;border:none;background-color:Transparent;font-size:36px}.wordButton.svelte-32k9uo:hover{color:#e74c3c}
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');#definitionArea.svelte-108ioux{width:60%;margin:auto}h2.svelte-108ioux{text-align:center;font-family:'Montserrat', sans-serif;font-size:60px}p.svelte-108ioux{font-family:'Montserrat', sans-serif;font-size:36px;text-align:left;line-height:1.5}
+#navArea.svelte-ch8ii8{width:50%;display:flex;justify-content:space-evenly;margin:auto}.navButton.svelte-ch8ii8{border:none;background-color:Transparent;margin-left:5px;margin-right:5px}
+iframe.svelte-1w9dv72{display:block;margin:auto;margin-top:3%}
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');iframe.svelte-enai1{display:block;margin:auto;margin-top:3%}span.svelte-enai1{font-family:'Montserrat', sans-serif;float:right}#kahootLink.svelte-enai1{width:1440px;margin:auto}a.svelte-enai1:hover{color:#e74c3c;text-decoration:none}
+
+/*# sourceMappingURL=bundle.css.map */
